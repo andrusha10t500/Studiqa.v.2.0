@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<title>Plugins</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery.littlelightbox.css" rel="stylesheet">
+	<style>
+	.content{
+		margin-top: 50px;
+	}
+	</style>
+<!--&lt;!&ndash;[if lt IE 9]>-->
+<!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+<!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+<!--<![endif]&ndash;&gt;-->
+</head>
+<body>
+
+<div class="container content">
+	<div class="row">
+		<div class="col-md-3">
+            <a href="https://unsplash.it/800/600?image=227" class="lightbox thumbnail " data-littlelightbox-group="gallery" title="Flying is life" ><img src="https://unsplash.it/800/600?image=227" alt="" /></a>
+		</div>
+		<div class="col-md-3">
+			<a class="lightbox thumbnail" href="https://unsplash.it/800/600?image=227" data-littlelightbox-group="gallery" title="Life is like climbing a mountain"><img src="https://unsplash.it/300/200?image=227" alt="Life is like climbing a mountain" /></a>
+		</div>
+		<div class="col-md-3">
+			<a class="lightbox thumbnail" href="https://unsplash.it/800/600?image=193" data-littlelightbox-group="gallery" title="Skiing, flying in white"><img src="https://unsplash.it/300/200?image=193" alt="Skiing, flying in white" /></a>
+		</div>
+		<div class="col-md-3">
+			<a class="lightbox thumbnail" href="https://unsplash.it/800/600?image=182" data-littlelightbox-group="gallery" title="Love nature as if love myself"><img src="https://unsplash.it/300/200?image=182" alt="Love nature as if love myself" /></a>
+		</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.littlelightbox.js"></script>
+
+<script>
+$(function(){
+	$('.lightbox').littleLightBox({
+		openMethod: 'changeIn',
+		closeMethod: 'elasticOut'
+	});
+});
+</script>
+
+</body>
+</html>

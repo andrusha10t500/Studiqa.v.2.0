@@ -1,0 +1,12 @@
+#navbar {
+    position: absolute;
+    z-index: 100;
+    border-radius: 5px;
+    width: 100%;
+    /*background: black;*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 0.1) 100%);
+    display: block;
+}
+/*#edit-modal {*/
+    /*z-index: -1;*/
+/*}*/
