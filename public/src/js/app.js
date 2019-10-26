@@ -283,6 +283,26 @@ $(document).ready(function(){
         });
     });
 
+    //Удаление участников
+    $('td input').click(function(e) {
+        e.preventDefault();
+        var $tr = e.target.parentNode.parentNode.childNodes[3].textContent;
+        console.log($tr);
+        $.ajax({
+            url: '/deleteUser',
+            type: 'post',
+            data: { id_user:  $tr, token: $('#_token').val()},
+            contentType: false,
+            dataType: 'json',
+            enctype: "multipart/form-data",
+            cache: false,
+            processData: false,
+            success: function() {
+                alert('Запись удалена');
+            }
+        });
+    })
+
     // $("#file").change(function() {
     //     var file = this.files[0];
     //     var fileType = file.type;

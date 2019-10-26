@@ -76,9 +76,31 @@
     </div>
     @if(Auth::user())
         @if(Auth::user()->note == "admin")
-            <div class="col-md-3 col-md-offset-1 text-center" id="list_users" style="margin-top: 5%">
-            {{--@foreach()--}}
-                {{--<label class="badge" for="event">Мероприятие:  <input class="form-control" type="text" name="event" value="" disabled></label>--}}
+            <div class="col-md-3 " id="list_users" style="margin-top: 5%">
+                <table class="table table-dark table-bordered">
+                    <thead class=" ">
+                    <tr>
+                        <th class="text-center" scope="col">#</th>
+                        <th class="text-center" scope="col">Event</th>
+                        <th class="text-center" scope="col">Name</th>
+                        <th class="text-center" scope="col">email</th>
+                        <th class="text-center" scope="col">IP</th>
+                        <input type="text" id="_token" value="{{ csrf_token() }}" hidden>
+                    </tr>
+                    </thead>
+                @foreach(DB::select('select * from users') as $user)
+                        <tbody>
+                            <tr>
+                                <td><input type="button" id="del" value="Del" class="btn btn-danger"></td>
+                                <th scope="row">{{ $user->id }}</th>
+                                <td>{{ $user->event }}</td>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->ip_adress }}</td>
+                            </tr>
+                        </tbody>
+
+                @endforeach
+                </table>
             </div>
             <div class="modal" tabindex="-1" role="dialog" id="edit-modal" style="opacity: 1; top: 5%;">
                 <div class="modal-dialog">
