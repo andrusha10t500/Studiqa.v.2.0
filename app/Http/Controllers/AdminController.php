@@ -1,15 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
-
-use http\Env\Request;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
     public function deleteUser(Request $request) {
-        DB::table('users')->delete('id',$request['id_user']);
-        return view('main', ['token' => $request['token']]);
+
+        echo $request['id_user'];
+        DB::delete('delete from users where id=?',[$request['id_user']]);
+
+        return view('main', ['token' => $request['_token']]);
     }
 }

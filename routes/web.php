@@ -26,10 +26,9 @@ Route::group(['middleware' => ['web']], function() {
        'as' => 'getUserFile'
     ]);
 
-    Route::post('/deleteUser', [
+    Route::get('/deleteUser', [
        'uses' => 'AdminController@deleteUser',
        'as' => 'deleteUser'
-
     ]);
 
 });

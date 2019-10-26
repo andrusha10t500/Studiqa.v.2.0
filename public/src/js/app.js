@@ -24,6 +24,11 @@
 // })
 
 $(document).ready(function(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     $('.lightbox').littleLightBox({
         openMethod: 'changeIn',
         closeMethod: 'elasticOut'
@@ -185,6 +190,26 @@ $(document).ready(function(){
                             }
                         });
                     });
+                    //Админка обновить
+                    $('#update').click(function() {
+                        $("a img").css({"box-shadow": "0 0 10px rgba(255,0,0,1)"});
+                        $("a").removeClass('lightbox thumbnail');
+                        $("a img").addClass('img-responsive');
+                        $("a.col-md-3.col-sm-3 img").click(function (e) {
+                            e.preventDefault();
+                            // // console.log(e.target.src);
+                            $('#edit-modal').modal();
+                            var image = e.target.cloneNode();
+                            $('#post-body img').remove();
+                            $('#post-body').append(image);
+                            $('#post-body img').addClass('img-responsive');
+                            $('#post-body img').css({'height': '200px'});
+                            $('.modal-backdrop').css({'background': '0'});
+                            console.log($('#post-body img').length);
+                            return false;
+                        })
+
+                    });
                     alert("Вы авторизованы");
                 } else {
                     alert("Вас нет в базе. Зарегистрируйтесь чтобы войти.");
@@ -290,13 +315,13 @@ $(document).ready(function(){
         console.log($tr);
         $.ajax({
             url: '/deleteUser',
-            type: 'post',
-            data: { id_user:  $tr, token: $('#_token').val()},
-            contentType: false,
-            dataType: 'json',
-            enctype: "multipart/form-data",
-            cache: false,
-            processData: false,
+            type: 'get',
+            data:  { 'id_user': $tr, 'token': $('#_token').val()},
+            // contentType: false,
+            // dataType: 'json',
+            // enctype: "multipart/form-data",
+            // cache: false,
+            // processData: false,
             success: function() {
                 alert('Запись удалена');
             }
