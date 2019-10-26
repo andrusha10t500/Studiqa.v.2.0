@@ -4,10 +4,6 @@
     <list default="true" id="e05046d7-66ba-4f27-a0db-02d1ee6e3f57" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,8 +46,8 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="116">
-                    <caret line="10" column="241" lean-forward="true" selection-start-line="10" selection-start-column="241" selection-end-line="10" selection-end-column="241" />
+                  <first_editor relative-caret-position="45">
+                    <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -461,7 +457,7 @@
       <workItem from="1571991735780" duration="3561000" />
       <workItem from="1571996310634" duration="5599000" />
       <workItem from="1572045336218" duration="12068000" />
-      <workItem from="1572062560367" duration="3715000" />
+      <workItem from="1572062560367" duration="3937000" />
     </task>
     <task id="LOCAL-00001" summary="new commit">
       <created>1572045642607</created>
@@ -547,11 +543,25 @@
       <option name="project" value="LOCAL" />
       <updated>1572063406461</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="new commit">
+      <created>1572073602543</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572073602543</updated>
+    </task>
+    <task id="LOCAL-00014" summary="new commit">
+      <created>1572073785662</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572073785662</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208721000" />
+    <option name="totallyTimeSpent" value="208943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1440" height="904" extended-state="6" />
@@ -910,8 +920,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="116">
-            <caret line="10" column="241" lean-forward="true" selection-start-line="10" selection-start-column="241" selection-end-line="10" selection-end-column="241" />
+          <first_editor relative-caret-position="45">
+            <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
           </first_editor>
           <second_editor />
         </state>
