@@ -31,5 +31,9 @@ Route::group(['middleware' => ['web']], function() {
        'as' => 'deleteUser'
     ]);
 
+    Route::post('/restartTable', function() {
+       return view('admin');
+    });
+
 });
 

@@ -2,9 +2,9 @@
     <nav id="navbar">
         {{--<form action="" class="navbar container-fluid">--}}
             @if(Auth::user())
-
                 <div class="row">
                     @if(Auth::user()->note == 'admin')
+
                         <a id="update" class="col-md-1 btn btn-success">Изменить</a>
                         <a id="save" class="col-md-1 btn btn-success">Сохранить</a>
                         <p class="col-md-6 col-md-offset-1" style="color: white; font-size: 30px; text-align: center">Панель Администратора</p>
@@ -33,9 +33,8 @@
                 </div>
             </div>
 
-
             @else
-                <input class="btn btn-success col-md-offset-9" type="button" id="signin" onclick="signin(event)" value="Войти"/>
+                <input class="btn btn-success col-md-offset-9" type="button" id="signin"  onclick="signin(event)" value="Войти" />
                 <input class="btn btn-success" type="button" id="signup" onclick="signup(event)" value="Зарегистрироваться"/>
                 {{--<a class="btn btn-success col-md-offset-9" id="signin">Войти</a>--}}
                 {{--<a class="btn btn-success" id="signup">Зарегистрироваться</a>--}}

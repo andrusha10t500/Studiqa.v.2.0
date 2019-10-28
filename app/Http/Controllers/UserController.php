@@ -69,8 +69,8 @@ class UserController extends Controller
 //        $objDemo->receiver='myTestForApp@gmail.com';
 //        Mail::to('myTestForApp@gmail.com')->send(new mailing($objDemo));
 ///////////////////////////////////////////
-        $to_name = 'myTest';
-        $to_email = 'myTestForApp@gmail.com';
+        $to_name = $name;
+        $to_email = $email;
         $data = array('name'=>$name . ' ' . $surname, 'body' => 'Вы совершили заявку на мероприятие ' . $event . '!');
 
         Mail::send('mailing.mail', $data, function($message) use ($to_name, $to_email)
@@ -92,13 +92,14 @@ class UserController extends Controller
 
             $mes = view('includes.header')->render();
 
+
                 //Redirect::route('home');
-            return Response()->json(['view' => $mes, 'message' => '1' ]);
+            return Response()->json(['view' => $mes, 'message' => '1']);
 //            return Redirect::view('includes.header')->with(['message' => '1']);
 
         }
         $mes = view('includes.header')->render();
-        return Response()->json(['view' => $mes, 'message' => '0' ]);
+        return Response()->json(['view' => $mes, 'message' => '0']);
 
 //        return Redirect::view('includes.header')->with(['message' => '0']);
     }

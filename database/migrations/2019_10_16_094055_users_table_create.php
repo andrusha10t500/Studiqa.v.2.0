@@ -25,6 +25,8 @@ class UsersTableCreate extends Migration
             $table->string('password');
             $table->string('education');
             $table->string('file')->nullable();
+            $table->string('note')->nullable();
+            $table->string('ip_adress')->nullable();
             $table->rememberToken();
         });
 

@@ -10,3 +10,6 @@
 /*#edit-modal {*/
     /*z-index: -1;*/
 /*}*/
+list_users {
+    display: block !important;
+}

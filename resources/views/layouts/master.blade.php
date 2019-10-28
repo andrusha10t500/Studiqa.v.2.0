@@ -9,7 +9,6 @@
         @yield('title')
     </title>
 
-    {{--<link rel="stylesheet" href="zoom/nivo-zoom.css" type="text/css" media="screen">--}}
     <link rel="stylesheet" href="zoom.1/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="zoom.1/css/jquery.littlelightbox.css">
     <link rel="stylesheet" href="">
@@ -30,6 +29,7 @@
 
     <div class="container-fluid">
         @yield('content')
+
     </div>
 
 </body>

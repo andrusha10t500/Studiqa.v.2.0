@@ -11,6 +11,6 @@ class AdminController extends Controller
         echo $request['id_user'];
         DB::delete('delete from users where id=?',[$request['id_user']]);
 
-        return view('main', ['token' => $request['_token']]);
+        return view('admin', ['token' => $request['_token']]);
     }
 }

@@ -34,19 +34,19 @@ $(document).ready(function(){
         closeMethod: 'elasticOut'
     });
 
-    $('#signin').click(function () {
-        $('#form_signup').animate({opacity: 0}, 500);
-        $('#form_signin').animate({opacity: 1}, 500);
-        $('#form_signup').hide();
-        $('#form_signin').show();
-
-    });
-    $('#signup').click(function () {
-        $('#form_signin').animate({opacity: 0}, 500);
-        $('#form_signup').animate({opacity: 1}, 500);
-        $('#form_signin').hide();
-        $('#form_signup').show();
-    });
+    // $('#signin').click(function () {
+    //     $('#form_signup').animate({opacity: 0}, 500);
+    //     $('#form_signin').animate({opacity: 1}, 500);
+    //     $('#form_signup').hide();
+    //     $('#form_signin').css({'visibility': 'visible'});
+    //
+    // });
+    // $('#signup').click(function () {
+    //     $('#form_signin').animate({opacity: 0}, 500);
+    //     $('#form_signup').animate({opacity: 1}, 500);
+    //     $('#form_signin').hide();
+    //     $('#form_signup').css({'visibility': 'visible'});
+    // });
 
     $('.dropdown-item').click(function () {
         $("#dropdownMenuButton").text(this.text);
@@ -175,6 +175,7 @@ $(document).ready(function(){
                     });
                     //logoff
                     $('#logoff').click(function (e) {
+                        $('#list_users').hide();
                         e.preventDefault();
                         $.ajax({
                             url: '/logout',
@@ -210,6 +211,8 @@ $(document).ready(function(){
                         })
 
                     });
+                    console.log(response);
+                    // $('#list_users').removeAttr('style');
                     alert("Вы авторизованы");
                 } else {
                     alert("Вас нет в базе. Зарегистрируйтесь чтобы войти.");
@@ -260,6 +263,7 @@ $(document).ready(function(){
             cache: false,
             processData: false,
             success: function(html) {
+                $('#list_users').hide();
                 $('#header').html(html);
             },
             error: function(e) {
@@ -345,6 +349,7 @@ function signin(e) {
     $('#form_signin').animate({opacity: 1}, 500);
     $('#form_signup').hide();
     $('#form_signin').show();
+    // $('#form_signin').css({'visibility': 'visible'});
 }
 
 function signup(e) {
