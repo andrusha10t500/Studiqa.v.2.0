@@ -1,5 +1,5 @@
 {{--@include('includes.header')--}}
-<div class="col-md-3" id="list_users" style="margin-top: 4%">
+<div class="col-md-3" id="list_users" style="margin-top: 12%">
     <table class="table table-dark table-bordered" id="table">
         <thead>
         <tr>
