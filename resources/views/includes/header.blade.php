@@ -4,7 +4,6 @@
             @if(Auth::user())
                 <div class="row">
                     @if(Auth::user()->note == 'admin')
-
                         <a id="update" class="col-md-1 btn btn-success">Изменить</a>
                         <a id="save" class="col-md-1 btn btn-success">Сохранить</a>
                         <p class="col-md-6 col-md-offset-1" style="color: white; font-size: 30px; text-align: center">Панель Администратора</p>
