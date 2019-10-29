@@ -44,12 +44,12 @@
     <div class="col-md-4">
         <div class="col-md-offset-1 text-center" id="form_signup" style="margin-top: 8%; " hidden>
             <form method="post" class="form-group rounded" enctype="multipart/form-data" style=" box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 2px;" >
-                <input class="form-control" type="text" name="event" id="event" value="A" placeholder="Введите событие">
-                <input class="form-control" type="text" name="surname" id="surname" value="Голик" placeholder="Введите фамилию">
-                <input class="form-control" type="text" name="name" id="name" value="George" placeholder="Введите имя">
-                <input class="form-control" type="text" name="tel" id="tel" value="9144279109" placeholder="Введите телефон">
-                <input class="form-control" type="text" name="email" id="email" value="test@test.com" placeholder="Введите email">
-                <input class="form-control" type="password" name="pass" id="pass" value="123456" placeholder="Введите пароль">
+                <input class="form-control" type="text" name="event" id="event" placeholder="Введите событие (A или B)">
+                <input class="form-control" type="text" name="surname" id="surname"  placeholder="Введите фамилию">
+                <input class="form-control" type="text" name="name" id="name"  placeholder="Введите имя">
+                <input class="form-control" type="text" name="tel" id="tel" placeholder="Введите телефон">
+                <input class="form-control" type="text" name="email" id="email"  placeholder="Введите email">
+                <input class="form-control" type="password" name="pass" id="pass" placeholder="Введите пароль">
                 <div class="dropdown" class="form-control" style="border: solid 1px; color: #2aabd2; border-radius: 5px">
                     <button name="education" class="form-control btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Выберите уровень образования
@@ -68,8 +68,8 @@
         </div>
         <div class="col-md-offset-1 text-center" id="form_signin" style="margin-top: 8%" hidden>
             <form method="post" class="form-group rounded" enctype="multipart/form-data" style=" box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 2px;" >
-                <input class="form-control" type="text" name="email_in" id="email_in" value="test@test.com" placeholder="Введите email">
-                <input class="form-control" type="password" name="pass_in" id="pass_in" value="123456" placeholder="Введите пароль">
+                <input class="form-control" type="text" name="email_in" id="email_in"  placeholder="Введите email">
+                <input class="form-control" type="password" name="pass_in" id="pass_in" placeholder="Введите пароль">
                 <input class="col-md-offset-4 col-md-4 btn btn-info" type="submit" value="Войти"/>
                 <input type="text" name="_token" id="_token" value="{{ Session::token() }}" hidden />
             </form>
@@ -83,20 +83,24 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-content="modal" aria-label="Close"></button>
-                                <h4 class="modal-title">Edit Post</h4>
+                                <h4 class="modal-title">Заменить картинку</h4>
                             </div>
                             <div class="modal-body">
                                 <form>
-                                    <div class="col-md-8" id="post-body">
+                                    <div class="col-md-8" id="post-body" >
                                         <label for="post-body">Edit the post</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="btn btn-info col-md-8" type="file" value="Поменять" style="margin-top: 100px;">
                                     </div>
                                 </form>
                             </div>
-                            <div class="modal-footer text-center">
+                            <div class="modal-footer text-center" style="border: solid 1px gray">
                                 {{--<button type="button" class="btn btn-primary" id="change" data-dismiss="modal">Change</button>--}}
-                                <input type="file" class="btn btn-primary col-md-4" value="Change"/>
-                                <button type="button" class="btn btn-primary col-md-4" id="modal-save">Save changes</button>
-                                <button type="button" class="btn btn-default col-md-4" id="close" data-dismiss="modal">Close</button>
+                                {{--<input type="file" class="btn btn-primary col-md-4" value="Change"/>--}}
+                                {{--<button type="button" class="btn btn-primary col-md-4" id="modal-save">Save changes</button>--}}
+                                <button type="button" class="btn btn-default col-md-2" id="close" data-dismiss="modal" style="margin-top: 50px;">Close</button>
+                                <button type="button" class="btn btn-default col-md-1 col-md-offset-1" id="close" data-dismiss="modal" style="margin-top: 50px;"> Ok</button>
                             </div>
                         </div>
                     </div>

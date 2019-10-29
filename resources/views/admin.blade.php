@@ -1,6 +1,6 @@
 {{--@include('includes.header')--}}
 <div class="col-md-3" id="list_users" style="margin-top: 12%">
-    <table class="table table-dark table-bordered" id="table">
+    <table class="simple-little-table" id="table">
         <thead>
         <tr>
             <th class="text-center" scope="col"></th>
