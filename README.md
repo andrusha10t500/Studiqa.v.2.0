@@ -8,10 +8,10 @@
         mysql5.7
     </li>
     <li>
-        composer
+        <a href="https://getcomposer.org/download/">composer</a>
     </li>
     <li>
-        laravel5.8
+        <a href="https://laravel.ru/docs/v5/installation">laravel5.8</a>
     </li>
 </ul>
 <p>Для запуска необходимо создать файл .env в корне проекта:
