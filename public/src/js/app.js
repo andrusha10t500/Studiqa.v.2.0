@@ -284,7 +284,7 @@ $(document).ready(function(){
         $("a").removeClass('lightbox thumbnail');
         $("a img").addClass('img-responsive');
         $("a.col-md-3.col-sm-3 img").click(function (e) {
-            e.preventDefault();
+            // e.preventDefault();
             // // console.log(e.target.src);
             $('#edit-modal').modal();
             var image = e.target.cloneNode();
